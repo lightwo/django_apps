@@ -1,4 +1,6 @@
+# -*- coding: utf-8 -*-
 # Django settings for django_apps project.
+import private_settings # 追加
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -9,12 +11,12 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = ''           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = ''             # Or path to database file if using sqlite3.
-DATABASE_USER = ''             # Not used with sqlite3.
-DATABASE_PASSWORD = ''         # Not used with sqlite3.
-DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
-DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
+DATABASE_ENGINE = private_settings.DATABASE_ENGINE
+DATABASE_NAME = private_settings.DATABASE_NAME
+DATABASE_USER = private_settings.DATABASE_USER
+DATABASE_PASSWORD = private_settings.DATABASE_PASSWORD
+DATABASE_HOST = private_settings.DATABASE_HOST
+DATABASE_PORT = private_settings.DATABASE_PORT
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -48,7 +50,7 @@ MEDIA_URL = ''
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'vw3k9l&79ij%b=3jf$%yu8o4r+ld33#$n!iujvgk&_pm=vz!_+'
+SECRET_KEY = private_settings.SECRET_KEY
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
