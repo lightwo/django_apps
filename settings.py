@@ -11,12 +11,12 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = private_settings.DATABASE_ENGINE
-DATABASE_NAME = private_settings.DATABASE_NAME
-DATABASE_USER = private_settings.DATABASE_USER
+DATABASE_ENGINE   = private_settings.DATABASE_ENGINE
+DATABASE_NAME     = private_settings.DATABASE_NAME
+DATABASE_USER     = private_settings.DATABASE_USER
 DATABASE_PASSWORD = private_settings.DATABASE_PASSWORD
-DATABASE_HOST = private_settings.DATABASE_HOST
-DATABASE_PORT = private_settings.DATABASE_PORT
+DATABASE_HOST     = private_settings.DATABASE_HOST
+DATABASE_PORT     = private_settings.DATABASE_PORT
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -78,4 +78,5 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django_apps.tasks'
 )
